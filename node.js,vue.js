@@ -1,6 +1,7 @@
+### Offline bulid nodejs apps   ###
 При попытке собрать vue.js приложение без доступа в интернет выходила ошибка о невозможности скачать npm пакеты из внешнего registry
-
 Решение проблемы, прописать в файл .npmrc параметр cache, содержащий путь к скаченным данным
+
 registry="https://registry.npmjs.com/"
 cache=.npm_cache
 
