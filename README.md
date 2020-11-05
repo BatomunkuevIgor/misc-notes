@@ -1,2 +1,2 @@
-# misc-notes
-Оформление markdown текстов [link][./tools/markdown.txt]
+#### misc-notes
+Оформление markdown текстов [link](./tools/markdown.txt)
