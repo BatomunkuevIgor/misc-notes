@@ -1,5 +1,4 @@
-### Table of Contents
-</br>
+### Table of Contents </br>
 - [Создание read-only пользователя в PostgreSQL](#postgresql_create_readonly_user)
 </br>
 ---
