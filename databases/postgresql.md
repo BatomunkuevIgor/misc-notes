@@ -1,7 +1,6 @@
 ### Table of Contents </br>
-- [Создание read-only пользователя в PostgreSQL](#postgresql_create_readonly_user)
+- [Создание read-only пользователя в PostgreSQL](#postgresql_create_readonly_user) </br>
 </br>
----</br>
 ##### Создание пользователя и базы </br>
 --- </br>
 ##### Создание read-only пользователя в PostgreSQL <a name="postgresql_create_readonly_user"></a> </br>
