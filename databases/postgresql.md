@@ -14,18 +14,18 @@ Create a group
 CREATE ROLE readaccess;
 ```
  </br>
-Grant access to existing tables
+Grant access to existing tables </br>
 ```
 GRANT USAGE ON SCHEMA public TO readaccess;
 GRANT SELECT ON ALL TABLES IN SCHEMA public TO readaccess;
 ```
  </br>
-Grant access to future tables
+Grant access to future tables </br>
 ```
 ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT SELECT ON TABLES TO readaccess;
 ```
  </br>
-Create a final user with password
+Create a final user with password </br>
 ```
 CREATE USER user WITH PASSWORD 'secret';
 GRANT readaccess TO user;
