@@ -2,14 +2,13 @@
 [Оформление markdown текстов](./tools/markdown.txt)
 
 
-### Databases (PostgreSql, MySql)
+##### Databases (PostgreSql, MySql)</br>
 [PostgreSql](./databases/postgresql.md)</br>
 [MySql](./databases/mysql.md)</br>
 
-</br>
-#### Cервисы
+##### Cервисы </br>
 [Apache Kafka](./unix_services/apache_kafka.md) </br>
 [Apache Zookeeper](./unix_services/apache_zookeeper.md)</br>
 [ElasticSearch](./unix_services/elasticsearch.md)</br>
-</br>
+
 
