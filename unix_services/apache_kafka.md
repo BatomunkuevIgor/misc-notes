@@ -22,7 +22,7 @@ kafka-topics --zookeeper zookeeper:2181 --list</br>
 kafka-topics --bootstrap-server localhost:9092 --list</br>
 kafka-topics --bootstrap-server localhost:9092 --describe --topic <topic></br>
 
-##### How retention for topic works? How to see retention policy for topic? <a name=retention_policy_kafka"></a> </br>
+##### How retention for topic works? How to see retention policy for topic? <a name=retention_policy_kafka></a> </br>
 
     Time based retention
         Once the configured retention time has been reached for Segment, it is marked for deletion or compaction depending on configured cleanup policy. Default retention period for Segments is 7 days.
