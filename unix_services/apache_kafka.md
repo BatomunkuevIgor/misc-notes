@@ -2,7 +2,7 @@
 [Основные термины kafka](#decription_kafka) </br>
 [Параметры очистки журналов kafka](#retention_policy_kafka) </br>
 
-[Создание топиков kafka](#t1) </br>
+[Работа с топиками kafka](#kafka_operations_topic) </br>
 [Очистка топиков](#t2) </br>
 [t3](#t3) </br>
 
@@ -17,6 +17,10 @@
 **Ofsset** - позиция записи</br>
 **Partition** - шард топика</br>
 
+##### Работа с топиками kafka <a name=kafka_operations_topic></br>
+kafka-topics --zookeeper zookeeper:2181 --list
+kafka-topics --bootstrap-server localhost:9092 --list
+kafka-topics --bootstrap-server localhost:9092 --describe --topic <topic>
 
 ##### How retention for topic works? How to see retention policy for topic? <a name=retention_policy_kafka"></a> </br>
 
