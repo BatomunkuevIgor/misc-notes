@@ -18,8 +18,9 @@
 **Partition** - шард топика</br>
 </br>
 Внутренние служебные топики</br>
-__consumer_offsets</br>
-_schema</br>
+**__consumer_offsets** - информация о позициях чтения всех консьюмеров по всем партициям. Хранится в сжатом виде</br>
+**_schema** - топик создаваемый confluent, хранит информацию по Schema Registry</br>
+</br>
 ##### Работа с топиками kafka <a name=kafka_operations_topic></br>
 kafka-topics --zookeeper zookeeper:2181 --list</br>
 kafka-topics --bootstrap-server localhost:9092 --list</br>
