@@ -9,7 +9,7 @@
 
 </br>
 
-##### Основные термины kafka <a name="decription_kafka"></a> </br>
+#### Основные термины kafka <a name="decription_kafka"></a> </br>
 **Record** - запись, состоящая из ключа и значения</br>
 **Topic** - категория или имя потока, куда публикуются данные</br>
 **Producer** - процесс публикующий данные в топик (пишут только последовательно, нету update, только insert)</br>
@@ -23,15 +23,15 @@
 **_schema** - топик создаваемый confluent, хранит информацию по Schema Registry</br>
 </br>
 
-##### Консольные утилиты <a name=kafka_console_utilites> </br>
+#### Консольные утилиты <a name=kafka_console_utilites> </br>
 
 
-##### Работа с топиками kafka <a name=kafka_operations_topic> </br>
+#### Работа с топиками kafka <a name=kafka_operations_topic> </br>
 kafka-topics --zookeeper zookeeper:2181 --list</br>
 kafka-topics --bootstrap-server localhost:9092 --list</br>
 kafka-topics --bootstrap-server localhost:9092 --describe --topic <topic></br>
 
-##### How retention for topic works? How to see retention policy for topic? <a name=retention_policy_kafka></a> </br>
+#### How retention for topic works? How to see retention policy for topic? <a name=retention_policy_kafka></a> </br>
 
     Time based retention
         Once the configured retention time has been reached for Segment, it is marked for deletion or compaction depending on configured cleanup policy. Default retention period for Segments is 7 days.
