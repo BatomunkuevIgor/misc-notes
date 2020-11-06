@@ -16,7 +16,9 @@
 **Consumer group** - группа читателей из одного топика для балансировки нагрузки по чтению. Разные consumer groups читают независимо друг от друга</br>
 **Ofsset** - позиция записи</br>
 **Partition** - шард топика</br>
-
+Внутренние служебные топики
+__consumer_offsets
+_schema
 ##### Работа с топиками kafka <a name=kafka_operations_topic></br>
 kafka-topics --zookeeper zookeeper:2181 --list</br>
 kafka-topics --bootstrap-server localhost:9092 --list</br>
