@@ -16,7 +16,7 @@
 **Consumer group** - группа читателей из одного топика для балансировки нагрузки по чтению. Разные consumer groups читают независимо друг от друга</br>
 **Ofsset** - позиция записи</br>
 **Partition** - шард топика</br>
-<
+
 
 ##### How retention for topic works? How to see retention policy for topic? <a name=retention_policy_kafka"></a> </br>
 
