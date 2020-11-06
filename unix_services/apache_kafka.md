@@ -23,7 +23,7 @@
 **_schema** - топик создаваемый confluent, хранит информацию по Schema Registry</br>
 </br>
 
-#### <font color='red'>Консольные утилиты </font><a name=kafka_console_utilites> </br>
+#### Консольные утилиты <a name=kafka_console_utilites> </br>
 
 
 #### Работа с топиками kafka <a name=kafka_operations_topic> </br>
