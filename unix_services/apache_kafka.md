@@ -1,6 +1,11 @@
 ### Table of Contents </br>
 [Основные термины kafka](#decription_kafka) </br>
 [Параметры очистки журналов kafka](#retention_policy_kafka) </br>
+
+[Создание топиков kafka](#t1) </br>
+[Очистка топиков](#t2) </br>
+[t3](#t3) </br>
+
 </br>
 
 ##### Основные термины kafka <a name="decription_kafka"></a> </br>
