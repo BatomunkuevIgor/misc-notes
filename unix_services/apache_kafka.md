@@ -1,5 +1,6 @@
 ### Table of Contents </br>
 [Основные термины kafka](#decription_kafka) </br>
+[Консольные утилиты](#kafka_console_utilites) </br>
 [Параметры очистки журналов kafka](#retention_policy_kafka) </br>
 
 [Работа с топиками kafka](#kafka_operations_topic) </br>
@@ -21,7 +22,11 @@
 **__consumer_offsets** - информация о позициях чтения всех консьюмеров по всем партициям. Хранится в сжатом виде</br>
 **_schema** - топик создаваемый confluent, хранит информацию по Schema Registry</br>
 </br>
-##### Работа с топиками kafka <a name=kafka_operations_topic></br>
+
+##### Консольные утилиты <a name=kafka_console_utilites> </br>
+
+
+##### Работа с топиками kafka <a name=kafka_operations_topic> </br>
 kafka-topics --zookeeper zookeeper:2181 --list</br>
 kafka-topics --bootstrap-server localhost:9092 --list</br>
 kafka-topics --bootstrap-server localhost:9092 --describe --topic <topic></br>
