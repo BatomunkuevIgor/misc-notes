@@ -9,10 +9,14 @@
 </br>
 
 ##### Основные термины kafka <a name="decription_kafka"></a> </br>
-Продюсеры пишут (пишут только последовательно, нету update, только insert)</br>
-Консьюмеры читают</br>
-ofsset с какой позиции читать</br>
-
+**Record** - запись, состоящая из ключа и значения</br>
+**Topic** - категория или имя потока, куда публикуются данные</br>
+**Producer** - процесс публикующий данные в топик (пишут только последовательно, нету update, только insert)</br>
+**Consumer** - процесс читающий данные из топика</br>
+**Consumer group** - группа читателей из одного топика для балансировки нагрузки по чтению. Разные consumer groups читают независимо друг от друга</br>
+**Ofsset** - позиция записи</br>
+**Partition** - шард топика</br>
+<
 
 ##### How retention for topic works? How to see retention policy for topic? <a name=retention_policy_kafka"></a> </br>
 
