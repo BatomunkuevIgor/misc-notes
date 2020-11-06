@@ -8,7 +8,7 @@
 [t3](#t3) </br>
 
 </br>
-
+---
 #### Основные термины kafka <a name="decription_kafka"></a> </br>
 **Record** - запись, состоящая из ключа и значения</br>
 **Topic** - категория или имя потока, куда публикуются данные</br>
@@ -24,7 +24,8 @@
 </br>
 
 #### Консольные утилиты <a name=kafka_console_utilites> </br>
-
+**Partition** - шард топика</br>
+</br>
 
 #### Работа с топиками kafka <a name=kafka_operations_topic> </br>
 kafka-topics --zookeeper zookeeper:2181 --list</br>
