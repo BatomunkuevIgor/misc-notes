@@ -71,8 +71,6 @@ kafka-console-producer.sh --topic TopicName --zookeeper zookeeper:2181 < mysourc
 ```
 kafka-console-consumer.sh --topic TopicName --zookeeper zookeeper:2181 --from-beginning
 ```
-
-
 </br>
 Запись в топик (отправкой файла в команду)
 ```
@@ -89,6 +87,7 @@ kafka-console-producer.sh --topic TopicName --zookeeper zookeeper:2181 < mysourc
 ```
 kafka-topics --bootstrap-server localhost:9092 --describe-all --entity-type topics
 ```
+</br>
 Очистка топика динамической установкой параметра времени жизни топика (retention.ms=1000 данные в топике будут жить всего 1 секунду)
 ```
 kafka-topics --bootstrap-server localhost:9092 --alter --entity-type topics --entity-name TopicName --add-config retention.ms=1000
