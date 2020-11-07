@@ -12,6 +12,12 @@
 [ElasticSearch](./unix_services/elasticsearch.md)</br>
 [Ssh](./unix_services/ssh.md)</br>
 
+##### Unix Tools </br>
+[Tmux](./tools/tmux.md) </br>
+[Curl](./tools/curl.md)</br>
+[Wget](./tools/wget.md)</br>
+
+
 #### Linux </br>
 [Debian create offline repository](./linux/debian_offline_repository.md) </br>
 
