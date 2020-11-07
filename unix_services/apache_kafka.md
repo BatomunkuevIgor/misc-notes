@@ -37,11 +37,19 @@
 При работе с топиками (и не только наверное) можно подключаться как к самой кафке указанеием параметра --bootstrap-server localhost:9092, так и к зукиперу указанием параметра --zookeeper zookeeper:2181 </br>
 Используется что то одно либо --bootstrap-server localhost:9092, либо --zookeeper zookeeper:2181, оба использовать не надо
 </br>
+</br>
+
 Создание топика
 ```
-kafka-topics --create --zookeeper zookeeper:2181 --list</br>
+kafka-topics --create --zookeeper zookeeper:2181 --list>
 ```
-kafka-topics --zookeeper zookeeper:2181 --list</br>
+
+Изменение количества партиций в топике (в данном примере задается количество партиций 4, можно только увеличивать)
+</br>
+```
+kafka-topics --zookeeper zookeeper:2181 --alter --topic TopicName --partition 4</br>
+```
+
 Вывод списка топиков
 ```
 kafka-topics --bootstrap-server localhost:2181 --list
