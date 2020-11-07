@@ -25,3 +25,8 @@
 ##### Configuration_Management_Systems </br>
 [Ansible](./Configuration_Management_Systems/ansible.md) </br>
 [Salt Stack](./Configuration_Management_Systems/SaltStack.md) </br>
+
+
+##### Криптография </br>
+[Gpg](./cryptography/gpg.md)</br>
+[Модель OSI и криптография](./cryptography/osi_crypto.md)</br>
