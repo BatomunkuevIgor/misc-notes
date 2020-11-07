@@ -5,7 +5,7 @@
 
 [Работа с топиками kafka](#kafka_operations_topic) </br>
 [Очистка топиков](#t2) </br>
-[t3](#t3) </br>
+[Tools Kafka](#kafka_tools)</br>
 
 </br>
 ---</br>
@@ -28,28 +28,24 @@
 **kafka-configs.sh** - This tool helps to manipulate and describe entity config for a topic, client, user or broker</br>
 **kafka-topics.sh** - Create, delete, describe, or change a topic.</br>
 **kafka-console-producer.sh** - This tool helps to read data from standard input and publish it to Kafka.</br>
-**Partition** - шард топика</br>
-**Partition** - шард топика</br>
-**Partition** - шард топика</br>
+**kafka-console-consumer.sh** - This tool helps to read data from Kafka topics and outputs it to standard output.</br>
+**kafka-producer-perf-test.sh** - This tool is used to verify the producer performance.</br>
 </br>
 
 #### Работа с топиками kafka <a name=kafka_operations_topic> </br>
 При работе с топиками (и не только наверное) можно подключаться как к самой кафке указанеием параметра --bootstrap-server localhost:9092, так и к зукиперу указанием параметра --zookeeper zookeeper:2181 </br>
 Используется что то одно либо --bootstrap-server localhost:9092, либо --zookeeper zookeeper:2181, оба использовать не надо
 </br>
-</br>
-
 Создание топика
 ```
 kafka-topics --create --zookeeper zookeeper:2181 --list>
 ```
-
-Изменение количества партиций в топике (в данном примере задается количество партиций 4, можно только увеличивать)
 </br>
+Изменение количества партиций в топике (в данном примере задается количество партиций 4, можно только увеличивать)
 ```
 kafka-topics --zookeeper zookeeper:2181 --alter --topic TopicName --partition 4</br>
 ```
-
+</br>
 Вывод списка топиков
 ```
 kafka-topics --bootstrap-server localhost:2181 --list
@@ -57,21 +53,37 @@ kafka-topics --bootstrap-server localhost:2181 --list
 </br>
 Вывести описание топика
 ```
-kafka-topics --zookeeper zookeeper:2181 --describe --topic TopicName</br>
+kafka-topics --zookeeper zookeeper:2181 --describe --topic TopicName
 ```
 </br>
-
 Запись в топик (с консоли, построчно руками вводим)
 ```
 kafka-console-producer.sh --topic TopicName --zookeeper zookeeper:2181
 ```
-
+</br>
 Запись в топик (отправкой файла в команду)
 ```
-kafka-console-producer.sh --topic TopicName --zookeeper zookeeper:2181 < file
+kafka-console-producer.sh --topic TopicName --zookeeper zookeeper:2181 < mysource.file
+```
+</br>
+Чтение данных с топика
+```
+kafka-console-consumer.sh --topic TopicName --zookeeper zookeeper:2181 --from-beginning
 ```
 
 
+</br>
+Запись в топик (отправкой файла в команду)
+```
+kafka-console-producer.sh --topic TopicName --zookeeper zookeeper:2181 < mysource.file
+```
+
+
+
+
+
+
+</br>
 Запрос конфигурационных параметров для топика
 ```
 kafka-topics --bootstrap-server localhost:9092 --describe-all --entity-type topics
@@ -96,3 +108,22 @@ kafka-topics --bootstrap-server localhost:9092 --alter --entity-type topics --en
     Size Based Retention:
         In this policy, we configure the maximum size of a Log data structure for a Topic partition. Once Log size reaches this size, it starts removing Segments from its end.
         log.retention.bytes
+
+
+
+
+
+
+
+
+#### Tools Kafka <a name=kafka_tools> </br>
+kafkacat (изучить)
+```
+kafkacat -b 10.0.0.1 -L
+```
+kafkactl (изучить)
+
+
+---
+
+---
