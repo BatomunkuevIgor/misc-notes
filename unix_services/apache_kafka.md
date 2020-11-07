@@ -6,6 +6,7 @@
 [Работа с топиками kafka](#kafka_operations_topic) </br>
 [Очистка топиков](#t2) </br>
 [Tools Kafka](#kafka_tools)</br>
+[Конфигурационный файл Kafka](#kafka_config_file) </br>
 
 </br>
 ---</br>
@@ -127,3 +128,37 @@ kafkactl (изучить)
 ---
 
 ---
+#### Конфигурационный файл Kafka <a name=kafka_config_file> </br>
+
+delete.topic.enable=true
+auto.create.topics.enable=true
+
+unclean.leader.election.enable=true
+auto.leader.rebalance.enable=true
+
+socket.send.buffer.bytes=102400
+socket.receive.buffer.bytes=102400
+socket.request.max.bytes=104857600
+
+offsets.topic.num.partitons=50
+offsets.topic.replication.factor=1
+
+log.retention.hours=168
+log.retention.bytes=-1
+log.segment.bytes=1073741824
+log.retention.check.interval.ms=300000
+
+zookeeper.connection.timeout.ms=6000
+
+default.replication.factor=1
+num.network.threads=3
+num.io.threads=8
+num.partitions=1
+num.recovery.threads.per.data.dir=1
+
+transaction.state.log.replication.factor=1
+transaction.state.log.min.isr=1
+group.initial.rebalance.delay.ms=0
+
+
+retention.policy изучить параметр
