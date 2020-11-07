@@ -37,7 +37,11 @@
 kafka-topics --zookeeper zookeeper:2181 --list</br>
 kafka-topics --bootstrap-server localhost:9092 --list</br>
 kafka-topics --bootstrap-server localhost:9092 --describe --topic <topic></br>
-**kafka-topics --bootstrap-server localhost:9092 --alter --entity-type topics --entity-name TopicName --ad-cnonfig retention.ms=1000** - Очистка топика</br>
+Очистка топика
+```
+kafka-topics --bootstrap-server localhost:9092 --alter --entity-type topics --entity-name TopicName --ad-cnonfig retention.ms=1000
+```
+</br>
 
 #### How retention for topic works? How to see retention policy for topic? <a name=retention_policy_kafka></a> </br>
 
