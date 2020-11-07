@@ -34,16 +34,37 @@
 </br>
 
 #### Работа с топиками kafka <a name=kafka_operations_topic> </br>
+При работе с топиками (и не только наверное) можно подключаться как к самой кафке указанеием параметра --bootstrap-server localhost:9092, так и к зукиперу указанием параметра --zookeeper zookeeper:2181 </br>
+Используется что то одно либо --bootstrap-server localhost:9092, либо --zookeeper zookeeper:2181, оба использовать не надо
+</br>
+Создание топика
+```
+kafka-topics --create --zookeeper zookeeper:2181 --list</br>
+```
 kafka-topics --zookeeper zookeeper:2181 --list</br>
-kafka-topics --bootstrap-server localhost:9092 --list</br>
-kafka-topics --bootstrap-server localhost:9092 --describe --topic <topic></br>
-Запрос конфигов для топиков
+Вывод списка топиков
+```
+kafka-topics --bootstrap-server localhost:2181 --list
+```
+</br>
+Вывести описание топика
+```
+kafka-topics --zookeeper zookeeper:2181 --describe --topic TopicName</br>
+```
+</br>
+
+
+Запрос конфигурационных параметров для топика
 ```
 kafka-topics --bootstrap-server localhost:9092 --describe-all --entity-type topics
 ```
-Очистка топика
+Очистка топика динамической установкой параметра времени жизни топика (retention.ms=1000 данные в топике будут жить всего 1 секунду)
 ```
 kafka-topics --bootstrap-server localhost:9092 --alter --entity-type topics --entity-name TopicName --add-config retention.ms=1000
+```
+Удаление динамических параметров (--delete-config удаляет ранее установленный параметр жизни топика)
+```
+kafka-topics --bootstrap-server localhost:9092 --alter --entity-type topics --entity-name TopicName --delete-config retention.ms
 ```
 </br>
 
