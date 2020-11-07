@@ -41,38 +41,42 @@
 ```
 kafka-topics --create --zookeeper zookeeper:2181 --list>
 ```
-</br>
+
+
 Изменение количества партиций в топике (в данном примере задается количество партиций 4, можно только увеличивать)
 ```
 kafka-topics --zookeeper zookeeper:2181 --alter --topic TopicName --partition 4</br>
 ```
-</br>
+
+
 Вывод списка топиков
 ```
 kafka-topics --bootstrap-server localhost:2181 --list
 ```
-</br>
+
+
 Вывести описание топика
 ```
 kafka-topics --zookeeper zookeeper:2181 --describe --topic TopicName
 ```
-</br>
+
+
 Запись в топик (с консоли, построчно руками вводим)
 ```
 kafka-console-producer.sh --topic TopicName --zookeeper zookeeper:2181
 ```
-</br>
+
+
 Запись в топик (отправкой файла в команду)
 ```
 kafka-console-producer.sh --topic TopicName --zookeeper zookeeper:2181 < mysource.file
 ```
-</br>
+
+
 Чтение данных с топика
 ```
 kafka-console-consumer.sh --topic TopicName --zookeeper zookeeper:2181 --from-beginning
 ```
-
-
 </br>
 Запись в топик (отправкой файла в команду)
 ```
