@@ -13,7 +13,6 @@
 [Ssh](./unix_services/ssh.md)</br>
 
 ##### Unix Tools </br>
-[Gpg](./tools/gpg.md)</br>
 [Curl](./tools/curl.md)</br>
 [Tmux](./tools/tmux.md) </br>
 [Wget](./tools/wget.md)</br>
