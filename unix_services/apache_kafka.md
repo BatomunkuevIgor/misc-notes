@@ -27,7 +27,7 @@
 #### Консольные утилиты <a name=kafka_console_utilites> </br>
 **kafka-configs.sh** - This tool helps to manipulate and describe entity config for a topic, client, user or broker</br>
 **kafka-topics.sh** - Create, delete, describe, or change a topic.</br>
-**Partition** - шард топика</br>
+**kafka-console-producer.sh** - This tool helps to read data from standard input and publish it to Kafka.</br>
 **Partition** - шард топика</br>
 **Partition** - шард топика</br>
 **Partition** - шард топика</br>
@@ -60,6 +60,16 @@ kafka-topics --bootstrap-server localhost:2181 --list
 kafka-topics --zookeeper zookeeper:2181 --describe --topic TopicName</br>
 ```
 </br>
+
+Запись в топик (с консоли, построчно руками вводим)
+```
+kafka-console-producer.sh --topic TopicName --zookeeper zookeeper:2181
+```
+
+Запись в топик (отправкой файла в команду)
+```
+kafka-console-producer.sh --topic TopicName --zookeeper zookeeper:2181 < file
+```
 
 
 Запрос конфигурационных параметров для топика
