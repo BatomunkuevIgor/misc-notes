@@ -59,36 +59,8 @@ kafka-topics --bootstrap-server localhost:2181 --list
 ```
 kafka-topics --zookeeper zookeeper:2181 --describe --topic TopicName
 ```
-<<<<<<< HEAD
 
-
-Запись в топик (с консоли, построчно руками вводим)
-```
-kafka-console-producer.sh --topic TopicName --zookeeper zookeeper:2181
-```
-
-
-Запись в топик (отправкой файла в команду)
-```
-kafka-console-producer.sh --topic TopicName --zookeeper zookeeper:2181 < mysource.file
-```
-
-
-Чтение данных с топика
-=======
-</br>
-Запись в топик (с консоли, построчно руками вводим)</br>
-```
-kafka-console-producer.sh --topic TopicName --zookeeper zookeeper:2181
-```
-</br>
-Запись в топик (отправкой файла в команду)</br>
-```
-kafka-console-producer.sh --topic TopicName --zookeeper zookeeper:2181 < mysource.file
-```
-</br>
 Чтение данных с топика</br>
->>>>>>> 823a7611b72409622da3acdf58ec6c1640519750
 ```
 kafka-console-consumer.sh --topic TopicName --zookeeper zookeeper:2181 --from-beginning
 ```
