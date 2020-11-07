@@ -39,7 +39,7 @@
 </br>
 Создание топика
 ```
-kafka-topics --create --zookeeper zookeeper:2181 --list>
+kafka-topics --create --zookeeper zookeeper:2181 --list
 ```
 </br>
 Изменение количества партиций в топике (в данном примере задается количество партиций 4, можно только увеличивать)
@@ -80,16 +80,15 @@ kafka-console-producer.sh --topic TopicName --zookeeper zookeeper:2181 < mysourc
 
 
 </br>
-Запрос конфигурационных параметров для топика
+Запрос конфигурационных параметров для топика</br>
 ```
 kafka-topics --bootstrap-server localhost:9092 --describe-all --entity-type topics
 ```
-</br>
-Очистка топика динамической установкой параметра времени жизни топика (retention.ms=1000 данные в топике будут жить всего 1 секунду)
+Очистка топика динамической установкой параметра времени жизни топика (retention.ms=1000 данные в топике будут жить всего 1 секунду)</br>
 ```
 kafka-topics --bootstrap-server localhost:9092 --alter --entity-type topics --entity-name TopicName --add-config retention.ms=1000
 ```
-Удаление динамических параметров (--delete-config удаляет ранее установленный параметр жизни топика)
+Удаление динамических параметров (--delete-config удаляет ранее установленный параметр жизни топика)</br>
 ```
 kafka-topics --bootstrap-server localhost:9092 --alter --entity-type topics --entity-name TopicName --delete-config retention.ms
 ```
