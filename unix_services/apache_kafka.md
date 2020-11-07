@@ -39,7 +39,7 @@
 </br>
 Создание топика
 ```
-kafka-topics --create --zookeeper zookeeper:2181 --list>
+kafka-topics --create --zookeeper zookeeper:2181 --list
 ```
 
 
@@ -59,6 +59,7 @@ kafka-topics --bootstrap-server localhost:2181 --list
 ```
 kafka-topics --zookeeper zookeeper:2181 --describe --topic TopicName
 ```
+<<<<<<< HEAD
 
 
 Запись в топик (с консоли, построчно руками вводим)
@@ -74,30 +75,41 @@ kafka-console-producer.sh --topic TopicName --zookeeper zookeeper:2181 < mysourc
 
 
 Чтение данных с топика
+=======
+</br>
+Запись в топик (с консоли, построчно руками вводим)</br>
+```
+kafka-console-producer.sh --topic TopicName --zookeeper zookeeper:2181
+```
+</br>
+Запись в топик (отправкой файла в команду)</br>
+```
+kafka-console-producer.sh --topic TopicName --zookeeper zookeeper:2181 < mysource.file
+```
+</br>
+Чтение данных с топика</br>
+>>>>>>> 823a7611b72409622da3acdf58ec6c1640519750
 ```
 kafka-console-consumer.sh --topic TopicName --zookeeper zookeeper:2181 --from-beginning
 ```
 </br>
-Запись в топик (отправкой файла в команду)
+Запись в топик (отправкой файла в команду)</br>
 ```
 kafka-console-producer.sh --topic TopicName --zookeeper zookeeper:2181 < mysource.file
 ```
 
 
 
-
-
-
 </br>
-Запрос конфигурационных параметров для топика
+Запрос конфигурационных параметров для топика</br>
 ```
 kafka-topics --bootstrap-server localhost:9092 --describe-all --entity-type topics
 ```
-Очистка топика динамической установкой параметра времени жизни топика (retention.ms=1000 данные в топике будут жить всего 1 секунду)
+Очистка топика динамической установкой параметра времени жизни топика (retention.ms=1000 данные в топике будут жить всего 1 секунду)</br>
 ```
 kafka-topics --bootstrap-server localhost:9092 --alter --entity-type topics --entity-name TopicName --add-config retention.ms=1000
 ```
-Удаление динамических параметров (--delete-config удаляет ранее установленный параметр жизни топика)
+Удаление динамических параметров (--delete-config удаляет ранее установленный параметр жизни топика)</br>
 ```
 kafka-topics --bootstrap-server localhost:9092 --alter --entity-type topics --entity-name TopicName --delete-config retention.ms
 ```
