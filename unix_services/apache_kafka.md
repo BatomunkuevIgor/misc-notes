@@ -37,9 +37,13 @@
 kafka-topics --zookeeper zookeeper:2181 --list</br>
 kafka-topics --bootstrap-server localhost:9092 --list</br>
 kafka-topics --bootstrap-server localhost:9092 --describe --topic <topic></br>
+Запрос конфигов для топиков
+```
+kafka-topics --bootstrap-server localhost:9092 --describe-all --entity-type topics
+```
 Очистка топика
 ```
-kafka-topics --bootstrap-server localhost:9092 --alter --entity-type topics --entity-name TopicName --ad-cnonfig retention.ms=1000
+kafka-topics --bootstrap-server localhost:9092 --alter --entity-type topics --entity-name TopicName --add-config retention.ms=1000
 ```
 </br>
 
