@@ -25,6 +25,11 @@
 </br>
 
 #### Консольные утилиты <a name=kafka_console_utilites> </br>
+**kafka-configs.sh** - This tool helps to manipulate and describe entity config for a topic, client, user or broker</br>
+**kafka-topics.sh** - Create, delete, describe, or change a topic.</br>
+**Partition** - шард топика</br>
+**Partition** - шард топика</br>
+**Partition** - шард топика</br>
 **Partition** - шард топика</br>
 </br>
 
