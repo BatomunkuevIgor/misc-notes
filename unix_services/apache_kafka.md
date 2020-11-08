@@ -4,7 +4,7 @@
 [Параметры очистки журналов kafka](#retention_policy_kafka) </br>
 
 [Работа с топиками kafka](#kafka_operations_topic) </br>
-[Очистка топиков](#t2) </br>
+[Очистка топиков](#kafka_topic_clear) </br>
 [Tools Kafka](#kafka_tools)</br>
 [Конфигурационный файл Kafka](#kafka_config_file) </br>
 
@@ -70,7 +70,9 @@ bin/kafka-console-producer.sh --broker-list localhost:9092 --topic TopicName < m
 ```
 bin/kafka-configs.sh --zookeeper localhost:2181 --entity-type topics  --describe --entity-name <TopicName>
 ```
-Очистка топика динамической установкой параметра времени жизни топика (retention.ms=1000 данные в топике будут жить всего 1 секунду)</br>
+#### Работа с топиками kafka <a name=kafka_topic_clear>
+
+Очистка топика динамической установкой параметра времени жизни топика (retention.ms=1000 данные в топике будут жить всего 1 секунду)
 ```
 bin/kafka-configs.sh --zookeeper localhost:2181 --entity-type topics --alter --entity-name <TopicName> --add-config retention.ms=1000
 ```
