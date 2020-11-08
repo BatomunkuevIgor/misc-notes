@@ -26,7 +26,7 @@
 **_schema** - топик создаваемый confluent, хранит информацию по Schema Registry</br>
 </br>
 
-#### Консольные утилиты <a name=kafka_console_utilites></a> </br>
+#### Консольные утилиты <a name=kafka_console_utilites></a></br>
 **kafka-configs.sh** - This tool helps to manipulate and describe entity config for a topic, client, user or broker</br>
 **kafka-topics.sh** - Create, delete, describe, or change a topic.</br>
 **kafka-console-producer.sh** - This tool helps to read data from standard input and publish it to Kafka.</br>
@@ -34,7 +34,7 @@
 **kafka-producer-perf-test.sh** - This tool is used to verify the producer performance.</br>
 </br>
 
-#### Работа с топиками kafka <a name=kafka_operations_topic></a> </br>
+#### Работа с топиками kafka <a name=kafka_operations_topic></a></br>
 При работе с топиками (и не только наверное) можно подключаться как к самой кафке указанеием параметра --bootstrap-server localhost:9092, так и к зукиперу указанием параметра --zookeeper zookeeper:2181 </br>
 Используется что то одно либо --bootstrap-server localhost:9092, либо --zookeeper zookeeper:2181, оба использовать не надо
 </br>
