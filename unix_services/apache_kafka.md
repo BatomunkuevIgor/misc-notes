@@ -58,11 +58,10 @@ bin/kafka-topics.sh --zookeeper localhost:2181 --list
 ```
 bin/kafka-topics.sh --zookeeper localhost:2181 --describe --topic TopicName
 ```
-Чтение данных с топика</br>
+Чтение данных с топика
 ```
 kafka-console-consumer.sh --topic TopicName --zookeeper zookeeper:2181 --from-beginning
 ```
-</br>
 Запись в топик (отправкой файла в команду)
 ```
 bin/kafka-console-producer.sh --broker-list localhost:9092 --topic TopicName < mysource.file
