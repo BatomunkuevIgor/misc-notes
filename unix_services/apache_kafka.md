@@ -67,9 +67,8 @@ kafka-console-consumer.sh --topic TopicName --zookeeper zookeeper:2181 --from-be
 </br>
 Запись в топик (отправкой файла в команду)</br>
 ```
-kafka-console-producer.sh --topic TopicName --zookeeper zookeeper:2181 < mysource.file
+bin/kafka-console-producer.sh --broker-list localhost:9092 --topic TopicName < mysource.file
 ```
-
 
 
 </br>
