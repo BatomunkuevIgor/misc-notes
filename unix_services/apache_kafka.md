@@ -39,19 +39,19 @@
 </br>
 Создание топика
 ```
-kafka-topics --zookeeper zookeeper:2181--create --topic TopicName
+bin/kafka-topics.sh --create --zookeeper localhost:2181 --topic <TopicName> --partitions 10 --replication-factor 1
 ```
 
 
 Изменение количества партиций в топике (в данном примере задается количество партиций 4, можно только увеличивать)
 ```
-kafka-topics --zookeeper zookeeper:2181 --alter --topic TopicName --partition 4
+bin/kafka-topics.sh --zookeeper localhost:2181 --alter --topic TopicName --partition 4
 ```
 
 
 Вывод списка топиков
 ```
-kafka-topics --bootstrap-server localhost:2181 --list
+bin/kafka-topics.sh --zookeeper localhost:2181 --list
 ```
 
 
