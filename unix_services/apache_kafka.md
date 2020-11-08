@@ -42,10 +42,11 @@
 ```
 bin/kafka-topics.sh --create --zookeeper localhost:2181 --topic <TopicName> --partitions 10 --replication-factor 1
 ```
+
 Удаление топика (Должен быть выставлен параметр delete.topic.enable=true в конфигурационном файле)
 ```
 bin/kafka-topics.sh --zookeeper localhost:2181 --delete --topic <TopicName>
-``
+```
 Изменение количества партиций в топике (в данном примере задается количество партиций 4, можно только увеличивать)
 ```
 bin/kafka-topics.sh --zookeeper localhost:2181 --alter --topic TopicName --partition 4
