@@ -39,13 +39,13 @@
 </br>
 Создание топика
 ```
-kafka-topics --create --zookeeper zookeeper:2181 --list
+kafka-topics --zookeeper zookeeper:2181--create --topic TopicName
 ```
 
 
 Изменение количества партиций в топике (в данном примере задается количество партиций 4, можно только увеличивать)
 ```
-kafka-topics --zookeeper zookeeper:2181 --alter --topic TopicName --partition 4</br>
+kafka-topics --zookeeper zookeeper:2181 --alter --topic TopicName --partition 4
 ```
 
 
