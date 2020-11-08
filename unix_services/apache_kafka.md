@@ -66,8 +66,7 @@ kafka-console-consumer.sh --topic TopicName --zookeeper zookeeper:2181 --from-be
 ```
 bin/kafka-console-producer.sh --broker-list localhost:9092 --topic TopicName < mysource.file
 ```
-</br>
-Запрос конфигурационных параметров для топика</br>
+Запрос конфигурационных параметров для топика
 ```
 bin/kafka-configs.sh --zookeeper localhost:2181 --entity-type topics  --describe --entity-name <TopicName>
 ```
@@ -75,7 +74,7 @@ bin/kafka-configs.sh --zookeeper localhost:2181 --entity-type topics  --describe
 ```
 bin/kafka-configs.sh --zookeeper localhost:2181 --entity-type topics --alter --entity-name <TopicName> --add-config retention.ms=1000
 ```
-Удаление динамических параметров (--delete-config удаляет ранее установленный параметр жизни топика)</br>
+Удаление динамических параметров (--delete-config удаляет ранее установленный параметр жизни топика)
 ```
 bin/kafka-configs.sh --zookeeper localhost:2181 --entity-type topics --alter --entity-name <TopicName> --delete-config retention.ms
 ```
