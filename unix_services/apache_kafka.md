@@ -42,7 +42,6 @@
 ```
 bin/kafka-topics.sh --create --zookeeper localhost:2181 --topic <TopicName> --partitions 10 --replication-factor 1
 ```
-
 Удаление топика (Должен быть выставлен параметр delete.topic.enable=true в конфигурационном файле)
 ```
 bin/kafka-topics.sh --zookeeper localhost:2181 --delete --topic <TopicName>
@@ -51,30 +50,23 @@ bin/kafka-topics.sh --zookeeper localhost:2181 --delete --topic <TopicName>
 ```
 bin/kafka-topics.sh --zookeeper localhost:2181 --alter --topic TopicName --partition 4
 ```
-
-
 Вывод списка топиков
 ```
 bin/kafka-topics.sh --zookeeper localhost:2181 --list
 ```
-
-
 Вывести описание топика
 ```
 bin/kafka-topics.sh --zookeeper localhost:2181 --describe --topic TopicName
 ```
-
 Чтение данных с топика</br>
 ```
 kafka-console-consumer.sh --topic TopicName --zookeeper zookeeper:2181 --from-beginning
 ```
 </br>
-Запись в топик (отправкой файла в команду)</br>
+Запись в топик (отправкой файла в команду)
 ```
 bin/kafka-console-producer.sh --broker-list localhost:9092 --topic TopicName < mysource.file
 ```
-
-
 </br>
 Запрос конфигурационных параметров для топика</br>
 ```
