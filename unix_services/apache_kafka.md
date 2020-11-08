@@ -70,7 +70,7 @@ bin/kafka-console-producer.sh --broker-list localhost:9092 --topic TopicName < m
 ```
 bin/kafka-configs.sh --zookeeper localhost:2181 --entity-type topics  --describe --entity-name <TopicName>
 ```
-#### Работа с топиками kafka <a name=kafka_topic_clear>
+#### Очистка топиков kafka <a name=kafka_topic_clear>
 
 Очистка топика динамической установкой параметра времени жизни топика (retention.ms=1000 данные в топике будут жить всего 1 секунду)
 ```
