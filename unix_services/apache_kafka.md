@@ -26,7 +26,7 @@
 **_schema** - топик создаваемый confluent, хранит информацию по Schema Registry</br>
 </br>
 
-#### Консольные утилиты <a name=kafka_console_utilites> </br>
+#### Консольные утилиты <a name=kafka_console_utilites></a> </br>
 **kafka-configs.sh** - This tool helps to manipulate and describe entity config for a topic, client, user or broker</br>
 **kafka-topics.sh** - Create, delete, describe, or change a topic.</br>
 **kafka-console-producer.sh** - This tool helps to read data from standard input and publish it to Kafka.</br>
@@ -34,7 +34,7 @@
 **kafka-producer-perf-test.sh** - This tool is used to verify the producer performance.</br>
 </br>
 
-#### Работа с топиками kafka <a name=kafka_operations_topic> </br>
+#### Работа с топиками kafka <a name=kafka_operations_topic></a> </br>
 При работе с топиками (и не только наверное) можно подключаться как к самой кафке указанеием параметра --bootstrap-server localhost:9092, так и к зукиперу указанием параметра --zookeeper zookeeper:2181 </br>
 Используется что то одно либо --bootstrap-server localhost:9092, либо --zookeeper zookeeper:2181, оба использовать не надо
 </br>
@@ -70,7 +70,7 @@ bin/kafka-console-producer.sh --broker-list localhost:9092 --topic TopicName < m
 ```
 bin/kafka-configs.sh --zookeeper localhost:2181 --entity-type topics  --describe --entity-name <TopicName>
 ```
-#### Очистка топиков kafka <a name=kafka_topic_clear>
+#### Очистка топиков kafka <a name=kafka_topic_clear></a>
 
 Очистка топика динамической установкой параметра времени жизни топика (retention.ms=1000 данные в топике будут жить всего 1 секунду)
 ```
@@ -100,7 +100,7 @@ bin/kafka-configs.sh --zookeeper localhost:2181 --entity-type topics --alter --e
 
 
 
-#### Tools Kafka <a name=kafka_tools> </br>
+#### Tools Kafka <a name=kafka_tools></a> </br>
 kafkacat (изучить)
 ```
 kafkacat -b 10.0.0.1 -L
@@ -111,7 +111,7 @@ kafkactl (изучить)
 ---
 
 ---
-#### Конфигурационный файл Kafka <a name=kafka_config_file> </br>
+#### Конфигурационный файл Kafka <a name=kafka_config_file></a> </br>
 
 delete.topic.enable=true
 auto.create.topics.enable=true
