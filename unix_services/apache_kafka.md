@@ -57,7 +57,7 @@ bin/kafka-topics.sh --zookeeper localhost:2181 --list
 
 Вывести описание топика
 ```
-kafka-topics --zookeeper zookeeper:2181 --describe --topic TopicName
+bin/kafka-topics.sh --zookeeper localhost:2181 --describe --topic TopicName
 ```
 
 Чтение данных с топика</br>
