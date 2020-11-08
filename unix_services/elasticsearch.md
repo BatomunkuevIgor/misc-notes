@@ -14,9 +14,8 @@
 curl 'http://localhost:9200/_cat/indicies?v'
 ```
 
-</br>
-### delete indicies <a name=es_delete_indicies></a></br>
+
+delete indicies</br>
 elasticsearch-curator</br>
-</br>
-#### Конфигурационный файл ElasticSearch <a name=es_config_file></a></br>
-</br>
+
+### Конфигурационный файл ElasticSearch <a name=es_config_file></a></br>
