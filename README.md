@@ -22,8 +22,8 @@
 [Debian create offline repository](./linux/debian_offline_repository.md) </br>
 
 ##### Configuration_Management_Systems
-[Ansible](./Configuration_Management_Systems/ansible.md) </br>
-[Salt Stack](./Configuration_Management_Systems/SaltStack.md) </br>
+[Ansible](./configuration_management_systems/ansible.md) </br>
+[Salt Stack](./configuration_management_systems/SaltStack.md) </br>
 
 
 ##### Криптография
