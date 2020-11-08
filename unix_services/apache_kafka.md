@@ -9,7 +9,8 @@
 [Конфигурационный файл Kafka](#kafka_config_file) </br>
 
 </br>
----</br>
+---
+</br>
 
 #### Основные термины kafka <a name="decription_kafka"></a> </br>
 **Record** - запись, состоящая из ключа и значения</br>
@@ -41,8 +42,10 @@
 ```
 bin/kafka-topics.sh --create --zookeeper localhost:2181 --topic <TopicName> --partitions 10 --replication-factor 1
 ```
-
-
+Удаление топика (Должен быть выставлен параметр delete.topic.enable=true в конфигурационном файле)
+```
+bin/kafka-topics.sh --zookeeper localhost:2181 --delete --topic <TopicName>
+``
 Изменение количества партиций в топике (в данном примере задается количество партиций 4, можно только увеличивать)
 ```
 bin/kafka-topics.sh --zookeeper localhost:2181 --alter --topic TopicName --partition 4
@@ -74,15 +77,15 @@ bin/kafka-console-producer.sh --broker-list localhost:9092 --topic TopicName < m
 </br>
 Запрос конфигурационных параметров для топика</br>
 ```
-kafka-topics --bootstrap-server localhost:9092 --describe-all --entity-type topics
+bin/kafka-configs.sh --zookeeper localhost:2181 --entity-type topics  --describe --entity-name <TopicName>
 ```
 Очистка топика динамической установкой параметра времени жизни топика (retention.ms=1000 данные в топике будут жить всего 1 секунду)</br>
 ```
-kafka-topics --bootstrap-server localhost:9092 --alter --entity-type topics --entity-name TopicName --add-config retention.ms=1000
+bin/kafka-configs.sh --zookeeper localhost:2181 --entity-type topics --alter --entity-name <TopicName> --add-config retention.ms=1000
 ```
 Удаление динамических параметров (--delete-config удаляет ранее установленный параметр жизни топика)</br>
 ```
-kafka-topics --bootstrap-server localhost:9092 --alter --entity-type topics --entity-name TopicName --delete-config retention.ms
+bin/kafka-configs.sh --zookeeper localhost:2181 --entity-type topics --alter --entity-name <TopicName> --delete-config retention.ms
 ```
 </br>
 
