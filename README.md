@@ -15,6 +15,7 @@
 ##### Unix Tools
 [Curl](./tools/curl.md)</br>
 [Tmux](./tools/tmux.md) </br>
+[Vim](./tools/vim.md)</br>
 [Wget](./tools/wget.md)</br>
 
 
