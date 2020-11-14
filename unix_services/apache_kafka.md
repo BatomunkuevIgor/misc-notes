@@ -27,11 +27,11 @@
 </br>
 
 #### Консольные утилиты <a name=kafka_console_utilites></a></br>
-**kafka-configs.sh** - This tool helps to manipulate and describe entity config for a topic, client, user or broker</br>
-**kafka-topics.sh** - Create, delete, describe, or change a topic.</br>
-**kafka-console-producer.sh** - This tool helps to read data from standard input and publish it to Kafka.</br>
-**kafka-console-consumer.sh** - This tool helps to read data from Kafka topics and outputs it to standard output.</br>
-**kafka-producer-perf-test.sh** - This tool is used to verify the producer performance.</br>
+**kafka-configs** - This tool helps to manipulate and describe entity config for a topic, client, user or broker</br>
+**kafka-topics** - Create, delete, describe, or change a topic.</br>
+**kafka-console-producer** - This tool helps to read data from standard input and publish it to Kafka.</br>
+**kafka-console-consumer** - This tool helps to read data from Kafka topics and outputs it to standard output.</br>
+**kafka-producer-perf-test** - This tool is used to verify the producer performance.</br>
 </br>
 
 #### Работа с топиками kafka <a name=kafka_operations_topic></a></br>
