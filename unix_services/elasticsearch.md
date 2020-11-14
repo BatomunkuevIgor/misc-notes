@@ -9,6 +9,16 @@
 </br>
 
 ### Основные операции с ElasticSearch <a name=es_operations></a></br>
+
+Получение всей информацию о состоянии кластера</br>
+```
+curl -XGET 'http://localhost:9200/_cluster/stats?human&pretty'
+```
+Компактный вывод информации о «здоровье» кластера</br>
+```
+curl http://localhost:9200/_cluster/health/
+```
+
 Получение индексов</br>
 ```
 curl 'http://localhost:9200/_cat/indicies?v'
