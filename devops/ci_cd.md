@@ -4,6 +4,6 @@
 ---
 
 #### Основные термины CI/CD <a name=ci_cd_decription></a> </br>
-**CI** - Continuous Integration (Commit to Source Control -> Build/Compile -> Test)
-**CD** - Continuous Delivery and Deployment (Commit to Source Control -> Build/Compile -> Test -> Deploy)
+**CI** - Continuous Integration (Commit to Source Control -> Build/Compile -> Test) </br>
+**CD** - Continuous Delivery and Deployment (Commit to Source Control -> Build/Compile -> Test -> Deploy) </br>
 ---
