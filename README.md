@@ -30,3 +30,6 @@
 ##### Криптография
 [Gpg](./cryptography/gpg.md)</br>
 [Модель OSI и криптография](./cryptography/osi_crypto.md)</br>
+
+##### DevOps
+[CI/CD](./devops/ci_cd.md)</br>

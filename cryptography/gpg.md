@@ -10,6 +10,7 @@
 #### Генерация новой пары ключей <a name="gpg_gen_key"></a> </br>
 ```
 gpg --gen-key
+
 ```
 ---
 #### Просмотр ключей <a name="gpg_view_keys"></a> </br>
