@@ -1,6 +1,7 @@
 ### Table of Contents </br>
 [Генерация новой пары ключей](#gpg_gen_key) </br>
 [Просмотр ключей](#gpg_view_keys) </br>
+[Экспорт ключей](#gpg_export_keys) </br>
 
 ---
 
@@ -15,6 +16,16 @@ gpg --gen-key
 gpg -k
 ```
 Просмотр приватных ключей
+```
+gpg -K
+```
+
+#### Экспорт ключей <a name="gpg_export_keys"></a> </br>
+Экспорт публичных ключей
+```
+gpg --export --armor keyid > public.gpg
+```
+Экспорт приватных ключей
 ```
 gpg -K
 ```
