@@ -2,6 +2,8 @@
 [Генерация новой пары ключей](#gpg_gen_key) </br>
 [Просмотр ключей](#gpg_view_keys) </br>
 [Экспорт ключей](#gpg_export_keys) </br>
+[Импорт ключей](#gpg_import_keys) </br>
+[Удаление ключей](#gpg_delete_keys) </br>
 
 ---
 
@@ -23,9 +25,29 @@ gpg -K
 #### Экспорт ключей <a name="gpg_export_keys"></a> </br>
 Экспорт публичных ключей
 ```
-gpg --export --armor keyid > public.gpg
+gpg --export --armor <KeyId> > public.gpg
 ```
 Экспорт приватных ключей
 ```
-gpg --export-secret-key --armor keyid > public.gpg
+gpg --export-secret-key --armor <KeyId> > secret.gpg
+```
+---
+#### Импорт ключей <a name="gpg_import_keys"></a> </br>
+Импорт публичных ключей
+```
+gpg --import public.gpg
+```
+Импорт приватных ключей
+```
+gpg --import secret.gpg
+```
+---
+#### Удаление ключей <a name="gpg_delete_keys"></a> </br>
+Экспорт публичных ключей
+```
+gpg --delete-keys <KeyId>
+```
+Экспорт приватных ключей
+```
+gpg --delete-secret-key <KeyId>
 ```
