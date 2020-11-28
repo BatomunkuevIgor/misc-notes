@@ -1,4 +1,4 @@
-##### Hard Skills</br>
+### Hard Skills</br>
 - scripting (bash,sheel)
 - CI/CD
 - DB
@@ -11,5 +11,4 @@
 nginx</br>
 tomcat</br>
 cloud</br>
-##### Hard Skills</br>
 
