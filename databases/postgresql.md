@@ -1,5 +1,6 @@
 ### Table of Contents </br>
 - [Создание read-only пользователя в PostgreSQL](#postgresql_create_readonly_user) </br>
+- [Создание dump-а БД] (#postgresql_pgdump)</br>
 </br>
 
 
@@ -26,3 +27,7 @@ Create a final user with password </br>
 CREATE USER user WITH PASSWORD 'secret';
 GRANT readaccess TO user;
 ```
+
+
+##### Создание dump-а БД<a name="postgresql_pgdump"></a></br>
+```sudo -Hu postgres pg_dump -d dbname | bzip2 > dbname.sql.bz2```
