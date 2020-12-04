@@ -35,3 +35,7 @@
 
 ##### DevOps
 [CI/CD](./devops/ci_cd.md)</br>
+
+
+#### Курсы
+[PostgreSQL 2020](./databases/course_PostgreSQL_2020.md)
