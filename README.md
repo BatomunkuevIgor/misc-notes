@@ -17,6 +17,8 @@
 [Tmux](./tools/tmux.md) </br>
 [Vim](./tools/vim.md)</br>
 [Wget](./tools/wget.md)</br>
+[Git](./tools/git.md)</br>
+
 
 
 #### Linux
