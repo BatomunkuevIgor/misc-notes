@@ -1,5 +1,4 @@
-### postgrespro_dba1 DBA 1</br>
-
+### PostgresPro DBA 1</br>
 - [     Введение](#course_postgrespro_dba1_introduction)
 - [1.	Установка и управление сервером](#course_postgrespro_dba1_item_1)
 - [2.	Использование psql](#course_postgrespro_dba1_item_2)
