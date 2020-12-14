@@ -20,8 +20,8 @@
 - [17.	Резервное копирование](#course_postgrespro_dba1_item_17)
 - [18.	Репликация](#course_postgrespro_dba1_item_18)
 </br>
-</br>
 
+---
 #### Введение <a name=course_postgrespro_dba1_introduction></a></br>
 ---
 #### 1.	Установка и управление сервером <a name=course_postgrespro_dba1_item_1></a></br>
@@ -59,4 +59,4 @@
 #### 17. Резервное копирование <a name=course_postgrespro_dba1_item_17></a></br>
 ---
 #### 18. Репликация <a name=course_postgrespro_dba1_item_18></a></br>
-
+---
