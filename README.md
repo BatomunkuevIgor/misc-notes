@@ -38,4 +38,5 @@
 
 
 #### Курсы
-[PostgreSQL 2020](./databases/course_PostgreSQL_2020.md)
+[Уроки PostgresPro](./databases/course_PostgresPro.md)
+[Уроки PostgreSql 2020](./databases/course_PostgreSQL_2020.md)</br>
