@@ -15,17 +15,22 @@
 </br>
 Create a group </br>
 ```CREATE ROLE readaccess;```
+
 Grant access to existing tables </br>
 ```GRANT USAGE ON SCHEMA public TO readaccess;```
 ```GRANT SELECT ON ALL TABLES IN SCHEMA public TO readaccess;```
+
 Grant access to future tables </br>
 ```ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT SELECT ON TABLES TO readaccess;```
+
 Create a final user with password </br>
 ```CREATE USER user WITH PASSWORD 'secret';```
 ```GRANT readaccess TO user;```
+
 ---
 ##### Создание dump-а БД<a name="postgresql_pgdump"></a></br>
 ```sudo -Hu postgres pg_dump -d dbname | bzip2 > dbname.sql.bz2```
+
 ---
 ##### Проверка списка доступных расширений <a name="postgresql_show_available_extensions"></a></br>
 ```postgres$ psql -c 'SELECT name, comment FROM pg_available_extensions ORDER BY name;'```
