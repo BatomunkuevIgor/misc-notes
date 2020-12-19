@@ -1,6 +1,7 @@
 ### Table of Contents </br>
 - [Создание read-only пользователя в PostgreSQL](#postgresql_create_readonly_user)
 - [Создание dump-а БД](#postgresql_pgdump)
+- [Проверка списка доступных расширений] (#postgresql_show_available_extensions)
 
 
 ##### Создание пользователя и базы </br>
@@ -30,3 +31,8 @@ GRANT readaccess TO user;
 
 ##### Создание dump-а БД<a name="postgresql_pgdump"></a></br>
 ```sudo -Hu postgres pg_dump -d dbname | bzip2 > dbname.sql.bz2```
+
+##### Проверка списка доступных расширений <a name="postgresql_show_available_extensions"></a></br>
+```postgres$ psql -c 'SELECT name, comment FROM pg_available_extensions ORDER BY name;'```
+
+
