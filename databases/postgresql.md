@@ -1,7 +1,7 @@
 ### Table of Contents </br>
 - [Создание read-only пользователя в PostgreSQL](#postgresql_create_readonly_user)
 - [Создание dump-а БД](#postgresql_pgdump)
-- [Проверка списка доступных расширений] (#postgresql_show_available_extensions)
+- [Проверка списка доступных расширений](#postgresql_show_available_extensions)
 
 
 ##### Создание пользователя и базы </br>
