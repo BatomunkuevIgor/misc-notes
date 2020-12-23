@@ -39,6 +39,8 @@ Create a final user with password </br>
 ---
 ##### Liquibase — Waiting for changelog lock….<a name="liquibase_lock"></a></br>
 Following SQL query returns locked column as true.</br>
-```SELECT * FROM DATABASECHANGELOGLOCK;```</br>
+```SELECT * FROM DATABASECHANGELOGLOCK;```
+
 To remove database lock:</br>
-```UPDATE DATABASECHANGELOGLOCK SET locked=false, lockgranted=null, lockedby=null WHERE id=1;```</br>
+```UPDATE DATABASECHANGELOGLOCK SET locked=false, lockgranted=null, lockedby=null WHERE id=1;```
+
