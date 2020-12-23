@@ -1,7 +1,11 @@
 ### Table of Contents </br>
 - [Создание read-only пользователя в PostgreSQL](#postgresql_create_readonly_user)
 - [Создание dump-а БД](#postgresql_pgdump)
+<<<<<<< HEAD
 - [Liquibase — Waiting for changelog lock….](#liquibase_lock)
+=======
+- [Проверка списка доступных расширений](#postgresql_show_available_extensions)
+>>>>>>> 4ed8ff6e98dd21a062e3122083a758ba231d0e5f
 
 
 ##### Создание пользователя и базы </br>
@@ -15,24 +19,27 @@
 </br>
 Create a group </br>
 ```CREATE ROLE readaccess;```
+
 Grant access to existing tables </br>
-```
-GRANT USAGE ON SCHEMA public TO readaccess;
-GRANT SELECT ON ALL TABLES IN SCHEMA public TO readaccess;
-```
+```GRANT USAGE ON SCHEMA public TO readaccess;```
+```GRANT SELECT ON ALL TABLES IN SCHEMA public TO readaccess;```
+
 Grant access to future tables </br>
 ```ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT SELECT ON TABLES TO readaccess;```
+
 Create a final user with password </br>
-```
-CREATE USER user WITH PASSWORD 'secret';
-GRANT readaccess TO user;
-```
+```CREATE USER user WITH PASSWORD 'secret';```
+```GRANT readaccess TO user;```
 
-
+---
 ##### Создание dump-а БД<a name="postgresql_pgdump"></a></br>
 ```sudo -Hu postgres pg_dump -d dbname | bzip2 > dbname.sql.bz2```
 
+---
+##### Проверка списка доступных расширений <a name="postgresql_show_available_extensions"></a></br>
+```postgres$ psql -c 'SELECT name, comment FROM pg_available_extensions ORDER BY name;'```
 
+---
 ##### Liquibase — Waiting for changelog lock….<a name="liquibase_lock"></a></br>
 Following SQL query returns locked column as true.
 ```SELECT * FROM DATABASECHANGELOGLOCK;```
