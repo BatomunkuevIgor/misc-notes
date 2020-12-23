@@ -1,6 +1,7 @@
 ### Table of Contents </br>
 - [Создание read-only пользователя в PostgreSQL](#postgresql_create_readonly_user)
 - [Создание dump-а БД](#postgresql_pgdump)
+- [Liquibase — Waiting for changelog lock….](#liquibase_lock)
 
 
 ##### Создание пользователя и базы </br>
@@ -30,3 +31,10 @@ GRANT readaccess TO user;
 
 ##### Создание dump-а БД<a name="postgresql_pgdump"></a></br>
 ```sudo -Hu postgres pg_dump -d dbname | bzip2 > dbname.sql.bz2```
+
+
+##### Liquibase — Waiting for changelog lock….<a name="liquibase_lock"></a></br>
+Following SQL query returns locked column as true.
+```SELECT * FROM DATABASECHANGELOGLOCK;```
+To remove database lock:
+```UPDATE DATABASECHANGELOGLOCK SET locked=false, lockgranted=null, lockedby=null WHERE id=1;```
