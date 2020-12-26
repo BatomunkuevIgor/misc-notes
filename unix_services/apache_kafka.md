@@ -12,7 +12,7 @@
 ---
 </br>
 
-#### Основные термины kafka <a name="decription_kafka"></a> </br>
+#### ***Основные термины kafka*** <a name="decription_kafka"></a> </br>
 **Record** - запись, состоящая из ключа и значения</br>
 **Topic** - категория или имя потока, куда публикуются данные</br>
 **Producer** - процесс публикующий данные в топик (пишут только последовательно, нету update, только insert)</br>
@@ -26,7 +26,7 @@
 **_schema** - топик создаваемый confluent, хранит информацию по Schema Registry</br>
 </br>
 
-#### Консольные утилиты <a name=kafka_console_utilites></a></br>
+#### ***Консольные утилиты*** <a name=kafka_console_utilites></a></br>
 **kafka-configs** - This tool helps to manipulate and describe entity config for a topic, client, user or broker</br>
 **kafka-topics** - Create, delete, describe, or change a topic.</br>
 **kafka-console-producer** - This tool helps to read data from standard input and publish it to Kafka.</br>
@@ -34,33 +34,42 @@
 **kafka-producer-perf-test** - This tool is used to verify the producer performance.</br>
 </br>
 
-#### Работа с топиками kafka <a name=kafka_operations_topic></a></br>
+#### ***Работа с топиками kafka*** <a name=kafka_operations_topic></a></br>
 При работе с топиками (и не только наверное) можно подключаться как к самой кафке указанеием параметра --bootstrap-server localhost:9092, так и к зукиперу указанием параметра --zookeeper zookeeper:2181 </br>
 Используется что то одно либо --bootstrap-server localhost:9092, либо --zookeeper zookeeper:2181, оба использовать не надо
 </br>
 Создание топика
 ```bin/kafka-topics.sh --create --zookeeper localhost:2181 --topic <TopicName> --partitions 10 --replication-factor 1```
-Удаление топика (Должен быть выставлен параметр delete.topic.enable=true в конфигурационном файле)
-```bin/kafka-topics.sh --zookeeper localhost:2181 --delete --topic <TopicName>```
-Изменение количества партиций в топике (в данном примере задается количество партиций 4, можно только увеличивать)
-```bin/kafka-topics.sh --zookeeper localhost:2181 --alter --topic TopicName --partition 4```
-Вывод списка топиков
-```bin/kafka-topics.sh --zookeeper localhost:2181 --list```
-Вывести описание топика
-```bin/kafka-topics.sh --zookeeper localhost:2181 --describe --topic TopicName```
-Чтение данных с топика
-```kafka-console-consumer.sh --topic TopicName --zookeeper zookeeper:2181 --from-beginning```
-Запись в топик (отправкой файла в команду)
-```bin/kafka-console-producer.sh --broker-list localhost:9092 --topic TopicName < mysource.file```
-Запрос конфигурационных параметров для топика
-```ibin/kafka-configs.sh --zookeeper localhost:2181 --entity-type topics  --describe --entity-name <TopicName>```
-#### Очистка топиков kafka <a name=kafka_topic_clear></a>
 
-Очистка топика динамической установкой параметра времени жизни топика (retention.ms=1000 данные в топике будут жить всего 1 секунду)
+Удаление топика (Должен быть выставлен параметр delete.topic.enable=true в конфигурационном файле)</br>
+```bin/kafka-topics.sh --zookeeper localhost:2181 --delete --topic <TopicName>```
+
+Изменение количества партиций в топике (в данном примере задается количество партиций 4, можно только увеличивать)</br>
+```bin/kafka-topics.sh --zookeeper localhost:2181 --alter --topic TopicName --partition 4```
+
+Вывод списка топиков</br>
+```bin/kafka-topics.sh --zookeeper localhost:2181 --list```
+
+Вывести описание топика</br>
+```bin/kafka-topics.sh --zookeeper localhost:2181 --describe --topic TopicName```
+
+Чтение данных с топика</br>
+```kafka-console-consumer.sh --topic TopicName --zookeeper zookeeper:2181 --from-beginning```
+
+Запись в топик (отправкой файла в команду)</br>
+```bin/kafka-console-producer.sh --broker-list localhost:9092 --topic TopicName < mysource.file```
+
+Запрос конфигурационных параметров для топика</br>
+```ibin/kafka-configs.sh --zookeeper localhost:2181 --entity-type topics  --describe --entity-name <TopicName>```
+
+#### ***Очистка топиков kafka*** <a name=kafka_topic_clear></a>
+
+Очистка топика динамической установкой параметра времени жизни топика (retention.ms=1000 данные в топике будут жить всего 1 секунду)</br>
 ```bin/kafka-configs.sh --zookeeper localhost:2181 --entity-type topics --alter --entity-name <TopicName> --add-config retention.ms=1000```
-Удаление динамических параметров (--delete-config удаляет ранее установленный параметр жизни топика)
+
+Удаление динамических параметров (--delete-config удаляет ранее установленный параметр жизни топика)</br>
 ```bin/kafka-configs.sh --zookeeper localhost:2181 --entity-type topics --alter --entity-name <TopicName> --delete-config retention.ms```
-</br>
+
 #### How retention for topic works? How to see retention policy for topic? <a name=retention_policy_kafka></a> </br>
 
     Time based retention
@@ -84,8 +93,6 @@ kafkacat (изучить)
 ```kafkacat -b 10.0.0.1 -L```
 kafkactl (изучить)
 
-
----
 
 ---
 #### Конфигурационный файл Kafka <a name=kafka_config_file></a> </br>
