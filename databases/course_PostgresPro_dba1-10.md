@@ -1,5 +1,5 @@
 ### DBA1-10 «Администрирование PostgreSQL 10. Базовый курс»</br>
-- [     Введение](#course_postgrespro_dba1_introduction)
+- [     Введение](#course_postgrespro_dba1_introduction)  [Видео на Yotube(https://www.youtube.com/watch?v=mXA861YV7Us&list=PLaFqU3KCWw6JhHBp07QSu9uE8zahhKnTn&index=1 "Я ссылка")
 - [1.	Установка и управление сервером](#course_postgrespro_dba1_item_1)
 - [2.	Использование psql](#course_postgrespro_dba1_item_2)
 - [3.	Конфигурирование](#course_postgrespro_dba1_item_3_)
