@@ -2,7 +2,7 @@
 [Основные термины ElasticSearch](#es_decription) </br>
 [Основные операции с ElasticSearch](#es_operations) </br>
 [Конфигурационный файл ElasticSearch](#es_config_file)</br>
-[Изменение информации о «здоровье кластера» одиночного экземпляра ElasticSearch](#es_Health_set_to_Green)</br>
+[Изменение информации о «здоровье кластера» одиночного экземпляра ElasticSearch](#es_Health_set_to_Green_standalone_server)</br>
 
 
 ---
@@ -34,7 +34,7 @@ elasticsearch-curator</br>
 
 
 
-### Изменение информации о «здоровье кластера» одиночного экземпляра ElasticSearch <a name=es_Health_set_to_Green></a></br>
+### Изменение информации о «здоровье кластера» одиночного экземпляра ElasticSearch <a name=es_Health_set_to_Green_standalone_server></a></br>
 Для одиночного экземпляра ElasticSearch информация о «здоровье кластера» будет отображаться как YELLOW из-за отстутствия реплик.
 Для переключения из состояни YELLOW в состояние Green необходимо выполнить следующий запрос </br>
 ```
