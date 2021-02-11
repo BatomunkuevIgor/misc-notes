@@ -2,6 +2,8 @@
 [Основные термины ElasticSearch](#es_decription) </br>
 [Основные операции с ElasticSearch](#es_operations) </br>
 [Конфигурационный файл ElasticSearch](#es_config_file)</br>
+[Изменение состояния одиночного экземпляра ElasticSearch] (#es_Health_set_to Green)</br>
+
 
 ---
 
@@ -29,3 +31,13 @@ delete indicies</br>
 elasticsearch-curator</br>
 
 ### Конфигурационный файл ElasticSearch <a name=es_config_file></a></br>
+
+
+
+### Изменение состояния одиночного экземпляра ElasticSearch <a name=es_Health_set_to Green></a></br>
+Для одиночного экземпляра ElasticSearch состояние будет отображаться как YELLOW из-за отстутствия реплик.
+Для переклчения из состояни YELLOW в состояние Green необоходимо выполнить следующий запрос </br>
+```
+$ curl -XPUT 'http://localhost:9200/_settings' -H 'Content-Type: application/json' -d '{ "index" : { "number_of_replicas" : 0 } }'
+{"acknowledged":true}
+``1
