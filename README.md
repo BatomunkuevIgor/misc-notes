@@ -11,6 +11,8 @@
 [Apache Zookeeper](./unix_services/apache_zookeeper.md)</br>
 [ElasticSearch](./unix_services/elasticsearch.md)</br>
 [Ssh](./unix_services/ssh.md)</br>
+[GlusterFS](./unix_services/glusterfs.md)</br>
+
 
 ##### Unix Tools
 [Curl](./tools/curl.md)</br>
