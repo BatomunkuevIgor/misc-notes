@@ -39,6 +39,7 @@ elasticsearch-curator</br>
 Для переключения из состояни YELLOW в состояние Green необходимо выполнить следующий запрос </br>
 ```
 $ curl -XPUT 'http://localhost:9200/_settings' -H 'Content-Type: application/json' -d '{ "index" : { "number_of_replicas" : 0 } }'
+
 {"acknowledged":true}
 ```
 
