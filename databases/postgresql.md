@@ -19,8 +19,8 @@ Create a group </br>
 ```CREATE ROLE readaccess;```
 </br>
 Grant access to existing tables </br>
-```GRANT USAGE ON SCHEMA public TO readaccess;```
-```GRANT SELECT ON ALL TABLES IN SCHEMA public TO readaccess;```
+```GRANT USAGE ON SCHEMA public TO readaccess;
+GRANT SELECT ON ALL TABLES IN SCHEMA public TO readaccess;```
 </br>
 Grant access to future tables </br>
 ```ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT SELECT ON TABLES TO readaccess;```
