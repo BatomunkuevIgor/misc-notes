@@ -17,17 +17,18 @@
 </br>
 Create a group </br>
 ```CREATE ROLE readaccess;```
-
+</br>
 Grant access to existing tables </br>
 ```GRANT USAGE ON SCHEMA public TO readaccess;```
 ```GRANT SELECT ON ALL TABLES IN SCHEMA public TO readaccess;```
-
+</br>
 Grant access to future tables </br>
 ```ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT SELECT ON TABLES TO readaccess;```
-
+</br>
 Create a final user with password </br>
 ```CREATE USER user WITH PASSWORD 'secret';```
 ```GRANT readaccess TO user;```
+</br>
 </br>
 ##### Создание dump-а БД<a name="postgresql_pgdump"></a></br>
 ```sudo -Hu postgres pg_dump -d dbname | bzip2 > dbname.sql.bz2```
@@ -37,8 +38,7 @@ Create a final user with password </br>
 </br>
 ##### Проверка списка доступных расширений <a name="postgresql_show_available_extensions"></a></br>
 ```postgres$ psql -c 'SELECT name, comment FROM pg_available_extensions ORDER BY name;'```
-
----
+</br>
 ##### Liquibase — Waiting for changelog lock….<a name="liquibase_lock"></a></br>
 Following SQL query returns locked column as true.</br>
 ```SELECT * FROM DATABASECHANGELOGLOCK;```
