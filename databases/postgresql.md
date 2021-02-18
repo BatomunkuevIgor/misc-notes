@@ -33,7 +33,7 @@ Create a final user with password </br>
 ##### Создание dump-а БД<a name="postgresql_pgdump"></a></br>
 ```sudo -Hu postgres pg_dump -d dbname | bzip2 > dbname.sql.bz2```
 </br>
-#### Зачистка wal логов PostgreSQL<a name="postgresql_pg_resetwal"></a></br>
+##### Зачистка wal логов PostgreSQL<a name="postgresql_pg_resetwal"></a></br>
 ```pg_resetwal -f /var/lib/postgres/data/```
 </br>
 ##### Проверка списка доступных расширений <a name="postgresql_show_available_extensions"></a></br>
