@@ -1,6 +1,7 @@
 ### Table of Contents </br>
 - [Создание read-only пользователя в PostgreSQL](#postgresql_create_readonly_user)
 - [Создание dump-а БД](#postgresql_pgdump)
+- [Зачистка wal логов PostgreSQL](#postgresql_pg_resetwal)
 - [Проверка списка доступных расширений](#postgresql_show_available_extensions)
 - [Liquibase — Waiting for changelog lock….](#liquibase_lock)
 
@@ -27,12 +28,13 @@ Grant access to future tables </br>
 Create a final user with password </br>
 ```CREATE USER user WITH PASSWORD 'secret';```
 ```GRANT readaccess TO user;```
-
----
+</br>
 ##### Создание dump-а БД<a name="postgresql_pgdump"></a></br>
 ```sudo -Hu postgres pg_dump -d dbname | bzip2 > dbname.sql.bz2```
-
----
+</br>
+#### Зачистка wal логов PostgreSQL<a name="postgresql_pg_resetwal"></a></br>
+```pg_resetwal -f /var/lib/postgres/data/```
+</br>
 ##### Проверка списка доступных расширений <a name="postgresql_show_available_extensions"></a></br>
 ```postgres$ psql -c 'SELECT name, comment FROM pg_available_extensions ORDER BY name;'```
 
