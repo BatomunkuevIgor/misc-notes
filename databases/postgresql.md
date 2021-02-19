@@ -1,6 +1,7 @@
 ### Table of Contents </br>
 - [Создание read-only пользователя в PostgreSQL](#postgresql_create_readonly_user)
 - [Создание dump-а БД](#postgresql_pgdump)
+- [Восстановление dump-а БД](#postgresql_pgdump_restore)
 - [Зачистка wal логов PostgreSQL](#postgresql_pg_resetwal)
 - [Проверка списка доступных расширений](#postgresql_show_available_extensions)
 - [Liquibase — Waiting for changelog lock….](#liquibase_lock)
@@ -31,7 +32,10 @@ Create a final user with password </br>
 </br>
 </br>
 ##### Создание dump-а БД<a name="postgresql_pgdump"></a></br>
-```sudo -Hu postgres pg_dump -d dbname | bzip2 > dbname.sql.bz2```
+```sudo -Hu postgres pg_dump -d dbname | bzip2 > dbdump.sql.bz2```
+</br>
+##### Восстановление dump-а БД<a name="postgresql_pgdump_restore"></a></br>
+```bzip2 -d dbdump.sql.bz2 |sudo -Hu postgres psql dbname```
 </br>
 ##### Зачистка wal логов PostgreSQL<a name="postgresql_pg_resetwal"></a></br>
 ```pg_resetwal -f /var/lib/postgres/data/```
