@@ -30,33 +30,36 @@ Create a final user with password </br>
 ```CREATE USER user WITH PASSWORD 'secret';```
 ```GRANT readaccess TO user;```
 </br>
-</br>
+---
 ##### Создание dump-а БД<a name="postgresql_pgdump"></a></br>
 ```sudo -Hu postgres pg_dump -d dbname | bzip2 > dbdump.sql.bz2```
 </br>
+---
 ##### Восстановление dump-а БД<a name="postgresql_pgdump_restore"></a></br>
 ```bzip2 -d dbdump.sql.bz2 |sudo -Hu postgres psql dbname```
 </br>
+---
 ##### Зачистка wal логов PostgreSQL<a name="postgresql_pg_resetwal"></a></br>
 Нужно остановить сервер PostgreSql</br>
 Выполняем команду pg_controldata указывая путь до базы postgresql</br>
 ```/usr/lib/postgresql-8.4/bin/pg_controldata /opt/backup/postgresql/8.4/data/```</br>
 </br>
 нас интересуют строчки:</br>
-```Latest checkpoint's NextXID: 0/1186399159```
-```Latest checkpoint's NextOID: 4716704```
+```Latest checkpoint's NextXID: 0/1186399159```</br>
+```Latest checkpoint's NextOID: 4716704```</br>
 </br>
-Выполняем команду pg_resetwal коророй указываем NextOID и NextXID (команда выполняется из под пользователя postgres)
-```pg_resetwal  -o 4716704 -x 1186399159 -f /var/lib/pgpro/std-12/data/```
+Выполняем команду pg_resetwal коророй указываем NextOID и NextXID (команда выполняется из под пользователя postgres)</br>
+```pg_resetwal  -o 4716704 -x 1186399159 -f /var/lib/pgpro/std-12/data/```</br>
 Запускаем сервер PostgreSql</br>
 </br>
+---
 ##### Проверка списка доступных расширений <a name="postgresql_show_available_extensions"></a></br>
 ```postgres$ psql -c 'SELECT name, comment FROM pg_available_extensions ORDER BY name;'```
 </br>
+---
 ##### Liquibase — Waiting for changelog lock….<a name="liquibase_lock"></a></br>
 Following SQL query returns locked column as true.</br>
-```SELECT * FROM DATABASECHANGELOGLOCK;```
-
+```SELECT * FROM DATABASECHANGELOGLOCK;```</br>
 To remove database lock:</br>
 ```UPDATE DATABASECHANGELOGLOCK SET locked=false, lockgranted=null, lockedby=null WHERE id=1;```
 
