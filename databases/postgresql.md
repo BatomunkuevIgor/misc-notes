@@ -30,14 +30,17 @@ Create a final user with password </br>
 ```CREATE USER user WITH PASSWORD 'secret';```
 ```GRANT readaccess TO user;```
 </br>
+
 ---
 ##### Создание dump-а БД<a name="postgresql_pgdump"></a></br>
 ```sudo -Hu postgres pg_dump -d dbname | bzip2 > dbdump.sql.bz2```
 </br>
+
 ---
 ##### Восстановление dump-а БД<a name="postgresql_pgdump_restore"></a></br>
 ```bzip2 -d dbdump.sql.bz2 |sudo -Hu postgres psql dbname```
 </br>
+
 ---
 ##### Зачистка wal логов PostgreSQL<a name="postgresql_pg_resetwal"></a></br>
 Нужно остановить сервер PostgreSql</br>
@@ -52,10 +55,12 @@ Create a final user with password </br>
 ```pg_resetwal  -o 4716704 -x 1186399159 -f /var/lib/pgpro/std-12/data/```</br>
 Запускаем сервер PostgreSql</br>
 </br>
+
 ---
 ##### Проверка списка доступных расширений <a name="postgresql_show_available_extensions"></a></br>
 ```postgres$ psql -c 'SELECT name, comment FROM pg_available_extensions ORDER BY name;'```
 </br>
+
 ---
 ##### Liquibase — Waiting for changelog lock….<a name="liquibase_lock"></a></br>
 Following SQL query returns locked column as true.</br>
