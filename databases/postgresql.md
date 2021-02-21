@@ -38,7 +38,17 @@ Create a final user with password </br>
 ```bzip2 -d dbdump.sql.bz2 |sudo -Hu postgres psql dbname```
 </br>
 ##### Зачистка wal логов PostgreSQL<a name="postgresql_pg_resetwal"></a></br>
-```pg_resetwal -f /var/lib/postgres/data/```
+Нужно остановить сервер PostgreSql</br>
+Выполняем команду pg_controldata указывая путь до базы postgresql</br>
+```/usr/lib/postgresql-8.4/bin/pg_controldata /opt/backup/postgresql/8.4/data/```</br>
+</br>
+нас интересуют строчки:</br>
+```Latest checkpoint's NextXID: 0/1186399159```
+```Latest checkpoint's NextOID: 4716704```
+</br>
+Выполняем команду pg_resetwal коророй указываем NextOID и NextXID (команда выполняется из под пользователя postgres)
+```pg_resetwal  -o 4716704 -x 1186399159 -f /var/lib/pgpro/std-12/data/```
+Запускаем сервер PostgreSql</br>
 </br>
 ##### Проверка списка доступных расширений <a name="postgresql_show_available_extensions"></a></br>
 ```postgres$ psql -c 'SELECT name, comment FROM pg_available_extensions ORDER BY name;'```
