@@ -20,7 +20,7 @@
 [Vim](./tools/vim.md)</br>
 [Wget](./tools/wget.md)</br>
 [Git](./tools/git.md)</br>
-[Однострочные скрипты](./tools/bash_single_line_scripts.md</br>
+[Single line scripts](./tools/bash_single_line_scripts.md</br>
 
 
 #### Linux
